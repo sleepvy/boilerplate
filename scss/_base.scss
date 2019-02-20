@@ -1,0 +1,11 @@
+body{
+    font-family: $basefont;
+    background-color: bisque;
+}
+
+header {
+    h1{
+        @include box;
+    }
+    
+}
