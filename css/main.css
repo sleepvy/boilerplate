@@ -422,13 +422,27 @@ textarea {
 
 body {
   font-family: "Raleway", sans-serif;
-  background-color: bisque;
+  background-color: #F3EBE5;
 }
 
 header h1 {
   background: white;
   border: solid 2px black;
   padding: 10px 20px;
+}
+
+nav {
+  background-color: white;
+}
+nav ul {
+  list-style: none;
+}
+nav ul a {
+  text-decoration: none;
+}
+
+main {
+  background-color: #C4AAAA;
 }
 
 /* ==========================================================================
@@ -592,4 +606,44 @@ header h1 {
   h3 {
     page-break-after: avoid;
   }
+}
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "title title title" "nav nav nav" "main main main";
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+@media screen and (min-width: 320px) {
+  .grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "nav" "main";
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "nav nav" "main main";
+  }
+}
+header {
+  grid-area: title;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
 }
