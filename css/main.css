@@ -422,7 +422,13 @@ textarea {
 
 body {
   font-family: "Raleway", sans-serif;
-  background-color: #F3EBE5;
+  background-color: white;
+  font-size: 12pt;
+}
+
+a {
+  text-decoration: none;
+  color: #C4AAAA;
 }
 
 header h1 {
@@ -436,13 +442,31 @@ nav {
 }
 nav ul {
   list-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: grey;
 }
 nav ul a {
   text-decoration: none;
+  color: black;
+}
+
+header {
+  margin: 60pt;
+  font-size: 18pt;
+}
+
+.text {
+  padding: 3em;
 }
 
 main {
-  background-color: #C4AAAA;
+  margin: 5em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ==========================================================================
@@ -615,25 +639,39 @@ main {
 }
 
 nav ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
+  margin: 0 0 1em 0;
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul li {
+  padding-right: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
-@media screen and (min-width: 320px) {
-  .grid-container {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr;
-    grid-template-areas: "title" "nav" "main";
+.two-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.text {
+  flex: 1;
+}
+
+.image {
+  flex: 1;
+}
+
+@media screen and (max-width: 320px) {
+  .two-col {
+    display: block;
   }
 }
-@media screen and (min-width: 768px) {
-  .grid-container {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "title title" "nav nav" "main main";
+@media screen and (max-width: 768px) {
+  .two-col {
+    display: block;
   }
 }
 header {
