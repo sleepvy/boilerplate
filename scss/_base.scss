@@ -1,12 +1,6 @@
 body {
     font-family: $basefont;
-    background-color: white;
-    font-size: 12pt;
-}
-
-a {
-    text-decoration: none;
-    color: $accentcolor;
+    background-color: $basecolor;
 }
 
 header {
@@ -21,32 +15,14 @@ nav {
 
     ul {
         list-style: none;
-        border-bottom-style: solid;
-        border-bottom-width: 1px;
-        border-color: grey;
 
         a {
             text-decoration: none;
-            color: black;
         }
     }
 
 }
 
-header {
-    margin: 60pt;
-    font-size: 18pt;
-}
-
-.text {
-    padding: 3em;
-}
-
 main {
-    margin: 5em;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+    background-color: $accentcolor;
 }

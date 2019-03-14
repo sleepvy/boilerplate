@@ -11,44 +11,37 @@
 
 nav {
     ul {
-        margin: 0 0 1em 0;
-        display: flex;
-        justify-content: flex-end;
-        li{
-            padding-right: 3em;
-            padding-top: 1em;
-            padding-bottom: 1em;
-        }
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
     }
 }
 
-.two-col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3em; 
-}
-
-.text{
-    flex: 1;
-}
-
-.image{
-    flex:1;
-}
-
-
 //phone
-@media screen and (max-width: 320px) {
-    .two-col {
-        display: block;
+@media screen and (min-width: 320px) {
+    .grid-container {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "title"
+            "nav"
+            "main";
     }
 }
 
 //tablet
-@media screen and (max-width: 768px) {
-    .two-col {
-        display: block;
+@media screen and (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "title title"
+            "nav nav"
+            "main main";
     }
 }
 
