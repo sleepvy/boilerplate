@@ -6,8 +6,8 @@ body {
 header {
     h1 {
         @include box;
+        
     }
-
 }
 
 nav {
@@ -18,6 +18,13 @@ nav {
 
         a {
             text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        a:hover{
+            color: white;
+            background-color: $accentcolor;
         }
     }
 
@@ -25,4 +32,9 @@ nav {
 
 main {
     background-color: $accentcolor;
+    margin: 3em;
+}
+
+#one, #two, #three {
+    margin: 3em;
 }

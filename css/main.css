@@ -429,6 +429,7 @@ header h1 {
   background: white;
   border: solid 2px black;
   padding: 10px 20px;
+  text-align: center;
 }
 
 nav {
@@ -439,10 +440,22 @@ nav ul {
 }
 nav ul a {
   text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+}
+nav ul a:hover {
+  color: white;
+  background-color: #C4AAAA;
 }
 
 main {
   background-color: #C4AAAA;
+  margin: 3em;
+}
+
+#one, #two, #three {
+  margin: 3em;
 }
 
 /* ==========================================================================
@@ -609,9 +622,9 @@ main {
 }
 .grid-container {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "title title title" "nav nav nav" "main main main";
+  grid-template-areas: "title title title" "nav nav nav" "main main main" "one two three";
 }
 
 nav ul {
@@ -620,20 +633,20 @@ nav ul {
   grid-template-rows: auto;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
   .grid-container {
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr;
-    grid-template-areas: "title" "nav" "main";
+    grid-template-areas: "title" "nav" "main" "one" "two" "three";
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .grid-container {
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "title title" "nav nav" "main main";
+    grid-template-areas: "title title" "nav nav" "main main" "one one" "two two" "three three";
   }
 }
 header {
@@ -646,4 +659,16 @@ nav {
 
 main {
   grid-area: main;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
 }
